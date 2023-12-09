@@ -1,0 +1,24 @@
+{
+  "name": "weapp-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build_wx_api": "ts-node builder/pre_wx_api.ts && ts-node builder/build_wx_api.ts",
+    "build_wx_cloud": "ts-node builder/build_wx_cloud.ts",
+    "build_foo": "ts-node builder/build_foo.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^16.7.2"
+  }
+}
