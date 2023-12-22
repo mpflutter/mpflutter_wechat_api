@@ -1,0 +1,4 @@
+# melos_managed_dependency_overrides: mpflutter_core
+dependency_overrides:
+  mpflutter_core:
+    path: ../mpflutter
