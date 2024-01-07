@@ -1,6 +1,6 @@
 name: mpflutter_wechat_api
 description: The MPFlutter wechat miniprogram api.
-version: 2.0.0-alpha.4
+version: 2.0.0
 homepage: https://mpflutter.com/
 
 environment:
@@ -9,4 +9,4 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  mpflutter_core: ">=2.0.0-alpha.4"
+  mpflutter_core: ">=2.0.0"
