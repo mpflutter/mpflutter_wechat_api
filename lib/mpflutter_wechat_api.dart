@@ -13992,7 +13992,9 @@ class ImageFile {
 class IncludePointsOption {
   late mpjs.JSObject $$context$$;
 
-  List<MapPostion> $points = <MapPostion>[];
+  set points(List<MapPostion> value) {
+    $$context$$["points"] = value.map((it) => it.$$context$$);
+  }
 
   List<MapPostion> get points {
     return ($$context$$['points'] as mpjs.JSArray).value()
