@@ -48,13 +48,7 @@ class ArrayBuffer {
   }
 }
 
-class Array<T> {
-  late mpjs.JSObject $$context$$;
-
-  Array({mpjs.JSObject? $$context$$}) {
-    this.$$context$$ = $$context$$ ?? mpjs.JSObject("Object");
-  }
-}
+typedef Array<T> = List<T>;
 
 class Uint8ClampedArray {
   late mpjs.JSObject $$context$$;
@@ -450,7 +444,7 @@ class AddCardOption {
   List<AddCardRequestInfo> $cardList = <AddCardRequestInfo>[];
 
   List<AddCardRequestInfo> get cardList {
-    return ($$context$$['cardList'] as List)
+    return ($$context$$['cardList'] as mpjs.JSArray).value()
         .map((it) => AddCardRequestInfo($$context$$: it))
         .toList();
   }
@@ -560,7 +554,7 @@ class AddCardSuccessCallbackResult {
   List<AddCardResponseInfo> $cardList = <AddCardResponseInfo>[];
 
   List<AddCardResponseInfo> get cardList {
-    return ($$context$$['cardList'] as List)
+    return ($$context$$['cardList'] as mpjs.JSArray).value()
         .map((it) => AddCardResponseInfo($$context$$: it))
         .toList();
   }
@@ -1532,7 +1526,7 @@ class AdvertiseReqObj {
   List<ManufacturerData>? $manufacturerData;
 
   List<ManufacturerData>? get manufacturerData {
-    return ($$context$$['manufacturerData'] as List)
+    return ($$context$$['manufacturerData'] as mpjs.JSArray).value()
         .map((it) => ManufacturerData($$context$$: it))
         .toList();
   }
@@ -1556,7 +1550,7 @@ class AnimationExportResult {
   List<IAnyObject> $actions = <IAnyObject>[];
 
   List<IAnyObject> get actions {
-    return ($$context$$['actions'] as List)
+    return ($$context$$['actions'] as mpjs.JSArray).value()
         .map((it) => IAnyObject($$context$$: it))
         .toList();
   }
@@ -2254,7 +2248,7 @@ class ApplyStickerOption {
   List<Sticker> $stickers = <Sticker>[];
 
   List<Sticker> get stickers {
-    return ($$context$$['stickers'] as List)
+    return ($$context$$['stickers'] as mpjs.JSArray).value()
         .map((it) => Sticker($$context$$: it))
         .toList();
   }
@@ -2798,7 +2792,7 @@ class BLEPeripheralService {
   List<Characteristic> $characteristics = <Characteristic>[];
 
   List<Characteristic> get characteristics {
-    return ($$context$$['characteristics'] as List)
+    return ($$context$$['characteristics'] as mpjs.JSArray).value()
         .map((it) => Characteristic($$context$$: it))
         .toList();
   }
@@ -4563,7 +4557,7 @@ class Characteristic {
   List<CharacteristicDescriptor>? $descriptors;
 
   List<CharacteristicDescriptor>? get descriptors {
-    return ($$context$$['descriptors'] as List)
+    return ($$context$$['descriptors'] as mpjs.JSArray).value()
         .map((it) => CharacteristicDescriptor($$context$$: it))
         .toList();
   }
@@ -5338,7 +5332,7 @@ class ChooseImageSuccessCallbackResult {
   List<ImageFile> $tempFiles = <ImageFile>[];
 
   List<ImageFile> get tempFiles {
-    return ($$context$$['tempFiles'] as List)
+    return ($$context$$['tempFiles'] as mpjs.JSArray).value()
         .map((it) => ImageFile($$context$$: it))
         .toList();
   }
@@ -5784,7 +5778,7 @@ class ChooseMediaSuccessCallbackResult {
   List<MediaFile> $tempFiles = <MediaFile>[];
 
   List<MediaFile> get tempFiles {
-    return ($$context$$['tempFiles'] as List)
+    return ($$context$$['tempFiles'] as mpjs.JSArray).value()
         .map((it) => MediaFile($$context$$: it))
         .toList();
   }
@@ -5878,7 +5872,7 @@ class ChooseMessageFileSuccessCallbackResult {
   List<ChooseFile> $tempFiles = <ChooseFile>[];
 
   List<ChooseFile> get tempFiles {
-    return ($$context$$['tempFiles'] as List)
+    return ($$context$$['tempFiles'] as mpjs.JSArray).value()
         .map((it) => ChooseFile($$context$$: it))
         .toList();
   }
@@ -8688,7 +8682,7 @@ class FaceDetectSuccessCallbackResult {
   List<IAnyObject> $faceInfo = <IAnyObject>[];
 
   List<IAnyObject> get faceInfo {
-    return ($$context$$['faceInfo'] as List)
+    return ($$context$$['faceInfo'] as mpjs.JSArray).value()
         .map((it) => IAnyObject($$context$$: it))
         .toList();
   }
@@ -8696,7 +8690,7 @@ class FaceDetectSuccessCallbackResult {
   List<IAnyObject> $pointArray = <IAnyObject>[];
 
   List<IAnyObject> get pointArray {
-    return ($$context$$['pointArray'] as List)
+    return ($$context$$['pointArray'] as mpjs.JSArray).value()
         .map((it) => IAnyObject($$context$$: it))
         .toList();
   }
@@ -9452,7 +9446,7 @@ class GetBLEDeviceCharacteristicsSuccessCallbackResult {
   List<BLECharacteristic> $characteristics = <BLECharacteristic>[];
 
   List<BLECharacteristic> get characteristics {
-    return ($$context$$['characteristics'] as List)
+    return ($$context$$['characteristics'] as mpjs.JSArray).value()
         .map((it) => BLECharacteristic($$context$$: it))
         .toList();
   }
@@ -9594,7 +9588,7 @@ class GetBLEDeviceServicesSuccessCallbackResult {
   List<BLEService> $services = <BLEService>[];
 
   List<BLEService> get services {
-    return ($$context$$['services'] as List)
+    return ($$context$$['services'] as mpjs.JSArray).value()
         .map((it) => BLEService($$context$$: it))
         .toList();
   }
@@ -10090,7 +10084,7 @@ class GetBeaconsSuccessCallbackResult {
   List<BeaconInfo> $beacons = <BeaconInfo>[];
 
   List<BeaconInfo> get beacons {
-    return ($$context$$['beacons'] as List)
+    return ($$context$$['beacons'] as mpjs.JSArray).value()
         .map((it) => BeaconInfo($$context$$: it))
         .toList();
   }
@@ -10224,7 +10218,7 @@ class GetBluetoothDevicesSuccessCallbackResult {
   List<BlueToothDevice> $devices = <BlueToothDevice>[];
 
   List<BlueToothDevice> get devices {
-    return ($$context$$['devices'] as List)
+    return ($$context$$['devices'] as mpjs.JSArray).value()
         .map((it) => BlueToothDevice($$context$$: it))
         .toList();
   }
@@ -10760,7 +10754,7 @@ class GetConnectedBluetoothDevicesSuccessCallbackResult {
   List<BluetoothDeviceInfo> $devices = <BluetoothDeviceInfo>[];
 
   List<BluetoothDeviceInfo> get devices {
-    return ($$context$$['devices'] as List)
+    return ($$context$$['devices'] as mpjs.JSArray).value()
         .map((it) => BluetoothDeviceInfo($$context$$: it))
         .toList();
   }
@@ -12197,7 +12191,7 @@ class GetSavedFileListSuccessCallbackResult {
   List<FileItem> $fileList = <FileItem>[];
 
   List<FileItem> get fileList {
-    return ($$context$$['fileList'] as List)
+    return ($$context$$['fileList'] as mpjs.JSArray).value()
         .map((it) => FileItem($$context$$: it))
         .toList();
   }
@@ -14001,7 +13995,7 @@ class IncludePointsOption {
   List<MapPostion> $points = <MapPostion>[];
 
   List<MapPostion> get points {
-    return ($$context$$['points'] as List)
+    return ($$context$$['points'] as mpjs.JSArray).value()
         .map((it) => MapPostion($$context$$: it))
         .toList();
   }
@@ -15059,7 +15053,7 @@ class LaunchOptionsApp {
   List<ForwardMaterials> $forwardMaterials = <ForwardMaterials>[];
 
   List<ForwardMaterials> get forwardMaterials {
-    return ($$context$$['forwardMaterials'] as List)
+    return ($$context$$['forwardMaterials'] as mpjs.JSArray).value()
         .map((it) => ForwardMaterials($$context$$: it))
         .toList();
   }
@@ -17220,7 +17214,7 @@ class OnBeaconUpdateListenerResult {
   List<BeaconInfo> $beacons = <BeaconInfo>[];
 
   List<BeaconInfo> get beacons {
-    return ($$context$$['beacons'] as List)
+    return ($$context$$['beacons'] as mpjs.JSArray).value()
         .map((it) => BeaconInfo($$context$$: it))
         .toList();
   }
@@ -17260,7 +17254,7 @@ class OnBluetoothDeviceFoundListenerResult {
   List<BlueToothDevice> $devices = <BlueToothDevice>[];
 
   List<BlueToothDevice> get devices {
-    return ($$context$$['devices'] as List)
+    return ($$context$$['devices'] as mpjs.JSArray).value()
         .map((it) => BlueToothDevice($$context$$: it))
         .toList();
   }
@@ -17580,7 +17574,7 @@ class OnGetWifiListListenerResult {
   List<WifiInfo> $wifiList = <WifiInfo>[];
 
   List<WifiInfo> get wifiList {
-    return ($$context$$['wifiList'] as List)
+    return ($$context$$['wifiList'] as mpjs.JSArray).value()
         .map((it) => WifiInfo($$context$$: it))
         .toList();
   }
@@ -18376,7 +18370,7 @@ class OpenCardOption {
   List<OpenCardRequestInfo> $cardList = <OpenCardRequestInfo>[];
 
   List<OpenCardRequestInfo> get cardList {
-    return ($$context$$['cardList'] as List)
+    return ($$context$$['cardList'] as mpjs.JSArray).value()
         .map((it) => OpenCardRequestInfo($$context$$: it))
         .toList();
   }
@@ -20226,7 +20220,7 @@ class PreloadAssetsOption {
   List<Asset> $data = <Asset>[];
 
   List<Asset> get data {
-    return ($$context$$['data'] as List)
+    return ($$context$$['data'] as mpjs.JSArray).value()
         .map((it) => Asset($$context$$: it))
         .toList();
   }
@@ -20418,7 +20412,7 @@ class PreviewMediaOption {
   List<MediaSource> $sources = <MediaSource>[];
 
   List<MediaSource> get sources {
-    return ($$context$$['sources'] as List)
+    return ($$context$$['sources'] as mpjs.JSArray).value()
         .map((it) => MediaSource($$context$$: it))
         .toList();
   }
@@ -25326,7 +25320,7 @@ class SetWifiListOption {
   List<WifiData> $wifiList = <WifiData>[];
 
   List<WifiData> get wifiList {
-    return ($$context$$['wifiList'] as List)
+    return ($$context$$['wifiList'] as mpjs.JSArray).value()
         .map((it) => WifiData($$context$$: it))
         .toList();
   }
@@ -25550,7 +25544,7 @@ class ShareToWeRunOption {
   List<WxaSportRecord> $recordList = <WxaSportRecord>[];
 
   List<WxaSportRecord> get recordList {
-    return ($$context$$['recordList'] as List)
+    return ($$context$$['recordList'] as mpjs.JSArray).value()
         .map((it) => WxaSportRecord($$context$$: it))
         .toList();
   }
@@ -30018,7 +30012,7 @@ class UpdatableMessageFrontEndTemplateInfo {
       <UpdatableMessageFrontEndParameter>[];
 
   List<UpdatableMessageFrontEndParameter> get parameterList {
-    return ($$context$$['parameterList'] as List)
+    return ($$context$$['parameterList'] as mpjs.JSArray).value()
         .map((it) => UpdatableMessageFrontEndParameter($$context$$: it))
         .toList();
   }
@@ -30537,7 +30531,7 @@ class VKBodyAnchor {
   List<VKOrigin> $points = <VKOrigin>[];
 
   List<VKOrigin> get points {
-    return ($$context$$['points'] as List)
+    return ($$context$$['points'] as mpjs.JSArray).value()
         .map((it) => VKOrigin($$context$$: it))
         .toList();
   }
@@ -30679,7 +30673,7 @@ class VKFaceAnchor {
   List<VKPoint> $points = <VKPoint>[];
 
   List<VKPoint> get points {
-    return ($$context$$['points'] as List)
+    return ($$context$$['points'] as mpjs.JSArray).value()
         .map((it) => VKPoint($$context$$: it))
         .toList();
   }
@@ -30793,7 +30787,7 @@ class VKHandAnchor {
   List<VKOrigin> $points = <VKOrigin>[];
 
   List<VKOrigin> get points {
-    return ($$context$$['points'] as List)
+    return ($$context$$['points'] as mpjs.JSArray).value()
         .map((it) => VKOrigin($$context$$: it))
         .toList();
   }
