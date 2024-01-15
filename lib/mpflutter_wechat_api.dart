@@ -14011,7 +14011,7 @@ class IncludePointsOption {
   late mpjs.JSObject $$context$$;
 
   set points(List<MapPostion> value) {
-    $$context$$["points"] = value.map((it) => it.$$context$$);
+    $$context$$["points"] = value.map((it) => it.$$context$$).toList();
   }
 
   List<MapPostion> get points {
