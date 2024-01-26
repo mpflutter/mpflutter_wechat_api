@@ -2960,62 +2960,122 @@ class BackgroundAudioManager {
   }
 
   void onCanplay(OnCanplayCallback listener) {
-    final result = $$context$$.callMethod('onCanplay', [listener]);
+    final result = $$context$$.callMethod('onCanplay', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onEnded(OnEndedCallback listener) {
-    final result = $$context$$.callMethod('onEnded', [listener]);
+    final result = $$context$$.callMethod('onEnded', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onError(BackgroundAudioManagerOnErrorCallback listener) {
-    final result = $$context$$.callMethod('onError', [listener]);
+    final result = $$context$$.callMethod('onError', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onNext(OnNextCallback listener) {
-    final result = $$context$$.callMethod('onNext', [listener]);
+    final result = $$context$$.callMethod('onNext', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onPause(OnPauseCallback listener) {
-    final result = $$context$$.callMethod('onPause', [listener]);
+    final result = $$context$$.callMethod('onPause', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onPlay(OnPlayCallback listener) {
-    final result = $$context$$.callMethod('onPlay', [listener]);
+    final result = $$context$$.callMethod('onPlay', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onPrev(OnPrevCallback listener) {
-    final result = $$context$$.callMethod('onPrev', [listener]);
+    final result = $$context$$.callMethod('onPrev', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onSeeked(OnSeekedCallback listener) {
-    final result = $$context$$.callMethod('onSeeked', [listener]);
+    final result = $$context$$.callMethod('onSeeked', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onSeeking(OnSeekingCallback listener) {
-    final result = $$context$$.callMethod('onSeeking', [listener]);
+    final result = $$context$$.callMethod('onSeeking', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onStop(InnerAudioContextOnStopCallback listener) {
-    final result = $$context$$.callMethod('onStop', [listener]);
+    final result = $$context$$.callMethod('onStop', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onTimeUpdate(OnTimeUpdateCallback listener) {
-    final result = $$context$$.callMethod('onTimeUpdate', [listener]);
+    final result = $$context$$.callMethod('onTimeUpdate', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onWaiting(OnWaitingCallback listener) {
-    final result = $$context$$.callMethod('onWaiting', [listener]);
+    final result = $$context$$.callMethod('onWaiting', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
@@ -14273,102 +14333,162 @@ class InnerAudioContext {
   }
 
   void offCanplay([OffCanplayCallback? listener]) {
-    final result = $$context$$.callMethod('offCanplay', [listener]);
+    final result = $$context$$
+        .callMethod('offCanplay', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offEnded([OffEndedCallback? listener]) {
-    final result = $$context$$.callMethod('offEnded', [listener]);
+    final result = $$context$$
+        .callMethod('offEnded', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offError([InnerAudioContextOffErrorCallback? listener]) {
-    final result = $$context$$.callMethod('offError', [listener]);
+    final result = $$context$$
+        .callMethod('offError', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offPause([OffPauseCallback? listener]) {
-    final result = $$context$$.callMethod('offPause', [listener]);
+    final result = $$context$$
+        .callMethod('offPause', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offPlay([OffPlayCallback? listener]) {
-    final result = $$context$$.callMethod('offPlay', [listener]);
+    final result = $$context$$
+        .callMethod('offPlay', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offSeeked([OffSeekedCallback? listener]) {
-    final result = $$context$$.callMethod('offSeeked', [listener]);
+    final result = $$context$$
+        .callMethod('offSeeked', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offSeeking([OffSeekingCallback? listener]) {
-    final result = $$context$$.callMethod('offSeeking', [listener]);
+    final result = $$context$$
+        .callMethod('offSeeking', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offStop([OffStopCallback? listener]) {
-    final result = $$context$$.callMethod('offStop', [listener]);
+    final result = $$context$$
+        .callMethod('offStop', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offTimeUpdate([OffTimeUpdateCallback? listener]) {
-    final result = $$context$$.callMethod('offTimeUpdate', [listener]);
+    final result = $$context$$.callMethod(
+        'offTimeUpdate', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offWaiting([OffWaitingCallback? listener]) {
-    final result = $$context$$.callMethod('offWaiting', [listener]);
+    final result = $$context$$
+        .callMethod('offWaiting', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void onCanplay(OnCanplayCallback listener) {
-    final result = $$context$$.callMethod('onCanplay', [listener]);
+    final result = $$context$$.callMethod('onCanplay', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onEnded(OnEndedCallback listener) {
-    final result = $$context$$.callMethod('onEnded', [listener]);
+    final result = $$context$$.callMethod('onEnded', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onError(InnerAudioContextOnErrorCallback listener) {
-    final result = $$context$$.callMethod('onError', [listener]);
+    final result = $$context$$.callMethod('onError', [
+      ListenerManager.addListener(
+        listener,
+        (res) => InnerAudioContextOnErrorListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onPause(OnPauseCallback listener) {
-    final result = $$context$$.callMethod('onPause', [listener]);
+    final result = $$context$$.callMethod('onPause', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onPlay(OnPlayCallback listener) {
-    final result = $$context$$.callMethod('onPlay', [listener]);
+    final result = $$context$$.callMethod('onPlay', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onSeeked(OnSeekedCallback listener) {
-    final result = $$context$$.callMethod('onSeeked', [listener]);
+    final result = $$context$$.callMethod('onSeeked', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onSeeking(OnSeekingCallback listener) {
-    final result = $$context$$.callMethod('onSeeking', [listener]);
+    final result = $$context$$.callMethod('onSeeking', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onStop(InnerAudioContextOnStopCallback listener) {
-    final result = $$context$$.callMethod('onStop', [listener]);
+    final result = $$context$$.callMethod('onStop', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onTimeUpdate(OnTimeUpdateCallback listener) {
-    final result = $$context$$.callMethod('onTimeUpdate', [listener]);
+    final result = $$context$$.callMethod('onTimeUpdate', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onWaiting(OnWaitingCallback listener) {
-    final result = $$context$$.callMethod('onWaiting', [listener]);
+    final result = $$context$$.callMethod('onWaiting', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
@@ -16362,12 +16482,18 @@ class NFCAdapter {
   }
 
   void offDiscovered([OffDiscoveredCallback? listener]) {
-    final result = $$context$$.callMethod('offDiscovered', [listener]);
+    final result = $$context$$.callMethod(
+        'offDiscovered', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void onDiscovered(OnDiscoveredCallback listener) {
-    final result = $$context$$.callMethod('onDiscovered', [listener]);
+    final result = $$context$$.callMethod('onDiscovered', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnDiscoveredListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
@@ -31913,12 +32039,22 @@ class Worker {
   }
 
   void onMessage(WorkerOnMessageCallback listener) {
-    final result = $$context$$.callMethod('onMessage', [listener]);
+    final result = $$context$$.callMethod('onMessage', [
+      ListenerManager.addListener(
+        listener,
+        (res) => WorkerOnMessageListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onProcessKilled(OnProcessKilledCallback listener) {
-    final result = $$context$$.callMethod('onProcessKilled', [listener]);
+    final result = $$context$$.callMethod('onProcessKilled', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
@@ -32863,56 +32999,72 @@ class BLEPeripheralServer {
 
   void offCharacteristicReadRequest(
       [OffCharacteristicReadRequestCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offCharacteristicReadRequest', [listener]);
+    final result = $$context$$.callMethod('offCharacteristicReadRequest',
+        [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offCharacteristicSubscribed(
       [OffCharacteristicSubscribedCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offCharacteristicSubscribed', [listener]);
+    final result = $$context$$.callMethod('offCharacteristicSubscribed',
+        [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offCharacteristicUnsubscribed(
       [OffCharacteristicUnsubscribedCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offCharacteristicUnsubscribed', [listener]);
+    final result = $$context$$.callMethod('offCharacteristicUnsubscribed',
+        [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offCharacteristicWriteRequest(
       [OffCharacteristicWriteRequestCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offCharacteristicWriteRequest', [listener]);
+    final result = $$context$$.callMethod('offCharacteristicWriteRequest',
+        [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void onCharacteristicReadRequest(
       OnCharacteristicReadRequestCallback listener) {
-    final result =
-        $$context$$.callMethod('onCharacteristicReadRequest', [listener]);
+    final result = $$context$$.callMethod('onCharacteristicReadRequest', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnCharacteristicReadRequestListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onCharacteristicSubscribed(OnCharacteristicSubscribedCallback listener) {
-    final result =
-        $$context$$.callMethod('onCharacteristicSubscribed', [listener]);
+    final result = $$context$$.callMethod('onCharacteristicSubscribed', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnCharacteristicSubscribedListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onCharacteristicUnsubscribed(
       OnCharacteristicUnsubscribedCallback listener) {
-    final result =
-        $$context$$.callMethod('onCharacteristicUnsubscribed', [listener]);
+    final result = $$context$$.callMethod('onCharacteristicUnsubscribed', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnCharacteristicSubscribedListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onCharacteristicWriteRequest(
       OnCharacteristicWriteRequestCallback listener) {
-    final result =
-        $$context$$.callMethod('onCharacteristicWriteRequest', [listener]);
+    final result = $$context$$.callMethod('onCharacteristicWriteRequest', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnCharacteristicWriteRequestListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
@@ -33158,22 +33310,34 @@ class DownloadTask {
   }
 
   void offHeadersReceived([OffHeadersReceivedCallback? listener]) {
-    final result = $$context$$.callMethod('offHeadersReceived', [listener]);
+    final result = $$context$$.callMethod(
+        'offHeadersReceived', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offProgressUpdate([DownloadTaskOffProgressUpdateCallback? listener]) {
-    final result = $$context$$.callMethod('offProgressUpdate', [listener]);
+    final result = $$context$$.callMethod(
+        'offProgressUpdate', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void onHeadersReceived(OnHeadersReceivedCallback listener) {
-    final result = $$context$$.callMethod('onHeadersReceived', [listener]);
+    final result = $$context$$.callMethod('onHeadersReceived', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnHeadersReceivedListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onProgressUpdate(DownloadTaskOnProgressUpdateCallback listener) {
-    final result = $$context$$.callMethod('onProgressUpdate', [listener]);
+    final result = $$context$$.callMethod('onProgressUpdate', [
+      ListenerManager.addListener(
+        listener,
+        (res) => DownloadTaskOnProgressUpdateListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 }
@@ -33656,32 +33820,50 @@ class InterstitialAd {
   }
 
   void offClose([UDPSocketOffCloseCallback? listener]) {
-    final result = $$context$$.callMethod('offClose', [listener]);
+    final result = $$context$$
+        .callMethod('offClose', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offError([InterstitialAdOffErrorCallback? listener]) {
-    final result = $$context$$.callMethod('offError', [listener]);
+    final result = $$context$$
+        .callMethod('offError', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offLoad([OffLoadCallback? listener]) {
-    final result = $$context$$.callMethod('offLoad', [listener]);
+    final result = $$context$$
+        .callMethod('offLoad', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void onClose(UDPSocketOnCloseCallback listener) {
-    final result = $$context$$.callMethod('onClose', [listener]);
+    final result = $$context$$.callMethod('onClose', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onError(InterstitialAdOnErrorCallback listener) {
-    final result = $$context$$.callMethod('onError', [listener]);
+    final result = $$context$$.callMethod('onError', [
+      ListenerManager.addListener(
+        listener,
+        (res) => InterstitialAdOnErrorListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onLoad(OnLoadCallback listener) {
-    final result = $$context$$.callMethod('onLoad', [listener]);
+    final result = $$context$$.callMethod('onLoad', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
@@ -34762,7 +34944,13 @@ class PreDownloadSubpackageTask {
 
   void onProgressUpdate(
       PreDownloadSubpackageTaskOnProgressUpdateCallback listener) {
-    final result = $$context$$.callMethod('onProgressUpdate', [listener]);
+    final result = $$context$$.callMethod('onProgressUpdate', [
+      ListenerManager.addListener(
+        listener,
+        (res) => PreDownloadSubpackageTaskOnProgressUpdateListenerResult(
+            $$context$$: res),
+      )
+    ]);
     return result;
   }
 }
@@ -34906,42 +35094,82 @@ class RecorderManager {
   }
 
   void onError(UDPSocketOnErrorCallback listener) {
-    final result = $$context$$.callMethod('onError', [listener]);
+    final result = $$context$$.callMethod('onError', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onFrameRecorded(OnFrameRecordedCallback listener) {
-    final result = $$context$$.callMethod('onFrameRecorded', [listener]);
+    final result = $$context$$.callMethod('onFrameRecorded', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnFrameRecordedListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onInterruptionBegin(OnInterruptionBeginCallback listener) {
-    final result = $$context$$.callMethod('onInterruptionBegin', [listener]);
+    final result = $$context$$.callMethod('onInterruptionBegin', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onInterruptionEnd(OnInterruptionEndCallback listener) {
-    final result = $$context$$.callMethod('onInterruptionEnd', [listener]);
+    final result = $$context$$.callMethod('onInterruptionEnd', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onPause(OnPauseCallback listener) {
-    final result = $$context$$.callMethod('onPause', [listener]);
+    final result = $$context$$.callMethod('onPause', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onResume(OnResumeCallback listener) {
-    final result = $$context$$.callMethod('onResume', [listener]);
+    final result = $$context$$.callMethod('onResume', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onStart(OnStartCallback listener) {
-    final result = $$context$$.callMethod('onStart', [listener]);
+    final result = $$context$$.callMethod('onStart', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onStop(RecorderManagerOnStopCallback listener) {
-    final result = $$context$$.callMethod('onStop', [listener]);
+    final result = $$context$$.callMethod('onStop', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnStopListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
@@ -34979,22 +35207,34 @@ class RequestTask {
   }
 
   void offChunkReceived([OffChunkReceivedCallback? listener]) {
-    final result = $$context$$.callMethod('offChunkReceived', [listener]);
+    final result = $$context$$.callMethod(
+        'offChunkReceived', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offHeadersReceived([OffHeadersReceivedCallback? listener]) {
-    final result = $$context$$.callMethod('offHeadersReceived', [listener]);
+    final result = $$context$$.callMethod(
+        'offHeadersReceived', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void onChunkReceived(OnChunkReceivedCallback listener) {
-    final result = $$context$$.callMethod('onChunkReceived', [listener]);
+    final result = $$context$$.callMethod('onChunkReceived', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnChunkReceivedListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onHeadersReceived(OnHeadersReceivedCallback listener) {
-    final result = $$context$$.callMethod('onHeadersReceived', [listener]);
+    final result = $$context$$.callMethod('onHeadersReceived', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnHeadersReceivedListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 }
@@ -35022,32 +35262,50 @@ class RewardedVideoAd {
   }
 
   void offClose([RewardedVideoAdOffCloseCallback? listener]) {
-    final result = $$context$$.callMethod('offClose', [listener]);
+    final result = $$context$$
+        .callMethod('offClose', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offError([RewardedVideoAdOffErrorCallback? listener]) {
-    final result = $$context$$.callMethod('offError', [listener]);
+    final result = $$context$$
+        .callMethod('offError', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offLoad([OffLoadCallback? listener]) {
-    final result = $$context$$.callMethod('offLoad', [listener]);
+    final result = $$context$$
+        .callMethod('offLoad', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void onClose(RewardedVideoAdOnCloseCallback listener) {
-    final result = $$context$$.callMethod('onClose', [listener]);
+    final result = $$context$$.callMethod('onClose', [
+      ListenerManager.addListener(
+        listener,
+        (res) => RewardedVideoAdOnCloseListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onError(RewardedVideoAdOnErrorCallback listener) {
-    final result = $$context$$.callMethod('onError', [listener]);
+    final result = $$context$$.callMethod('onError', [
+      ListenerManager.addListener(
+        listener,
+        (res) => RewardedVideoAdOnErrorListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onLoad(OnLoadCallback listener) {
-    final result = $$context$$.callMethod('onLoad', [listener]);
+    final result = $$context$$.callMethod('onLoad', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 }
@@ -35103,22 +35361,42 @@ class SocketTask {
   }
 
   void onClose(SocketTaskOnCloseCallback listener) {
-    final result = $$context$$.callMethod('onClose', [listener]);
+    final result = $$context$$.callMethod('onClose', [
+      ListenerManager.addListener(
+        listener,
+        (res) => SocketTaskOnCloseListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onError(UDPSocketOnErrorCallback listener) {
-    final result = $$context$$.callMethod('onError', [listener]);
+    final result = $$context$$.callMethod('onError', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onMessage(SocketTaskOnMessageCallback listener) {
-    final result = $$context$$.callMethod('onMessage', [listener]);
+    final result = $$context$$.callMethod('onMessage', [
+      ListenerManager.addListener(
+        listener,
+        (res) => SocketTaskOnMessageListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onOpen(OnOpenCallback listener) {
-    final result = $$context$$.callMethod('onOpen', [listener]);
+    final result = $$context$$.callMethod('onOpen', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnOpenListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
@@ -35151,52 +35429,82 @@ class TCPSocket {
   }
 
   void offBindWifi([OffBindWifiCallback? listener]) {
-    final result = $$context$$.callMethod('offBindWifi', [listener]);
+    final result = $$context$$
+        .callMethod('offBindWifi', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offClose([UDPSocketOffCloseCallback? listener]) {
-    final result = $$context$$.callMethod('offClose', [listener]);
+    final result = $$context$$
+        .callMethod('offClose', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offConnect([OffConnectCallback? listener]) {
-    final result = $$context$$.callMethod('offConnect', [listener]);
+    final result = $$context$$
+        .callMethod('offConnect', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offError([UDPSocketOffErrorCallback? listener]) {
-    final result = $$context$$.callMethod('offError', [listener]);
+    final result = $$context$$
+        .callMethod('offError', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offMessage([TCPSocketOffMessageCallback? listener]) {
-    final result = $$context$$.callMethod('offMessage', [listener]);
+    final result = $$context$$
+        .callMethod('offMessage', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void onBindWifi(OnBindWifiCallback listener) {
-    final result = $$context$$.callMethod('onBindWifi', [listener]);
+    final result = $$context$$.callMethod('onBindWifi', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onClose(UDPSocketOnCloseCallback listener) {
-    final result = $$context$$.callMethod('onClose', [listener]);
+    final result = $$context$$.callMethod('onClose', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onConnect(OnConnectCallback listener) {
-    final result = $$context$$.callMethod('onConnect', [listener]);
+    final result = $$context$$.callMethod('onConnect', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onError(UDPSocketOnErrorCallback listener) {
-    final result = $$context$$.callMethod('onError', [listener]);
+    final result = $$context$$.callMethod('onError', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onMessage(TCPSocketOnMessageCallback listener) {
-    final result = $$context$$.callMethod('onMessage', [listener]);
+    final result = $$context$$.callMethod('onMessage', [
+      ListenerManager.addListener(
+        listener,
+        (res) => TCPSocketOnMessageListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
@@ -35248,42 +35556,66 @@ class UDPSocket {
   }
 
   void offClose([UDPSocketOffCloseCallback? listener]) {
-    final result = $$context$$.callMethod('offClose', [listener]);
+    final result = $$context$$
+        .callMethod('offClose', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offError([UDPSocketOffErrorCallback? listener]) {
-    final result = $$context$$.callMethod('offError', [listener]);
+    final result = $$context$$
+        .callMethod('offError', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offListening([OffListeningCallback? listener]) {
-    final result = $$context$$.callMethod('offListening', [listener]);
+    final result = $$context$$
+        .callMethod('offListening', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offMessage([UDPSocketOffMessageCallback? listener]) {
-    final result = $$context$$.callMethod('offMessage', [listener]);
+    final result = $$context$$
+        .callMethod('offMessage', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void onClose(UDPSocketOnCloseCallback listener) {
-    final result = $$context$$.callMethod('onClose', [listener]);
+    final result = $$context$$.callMethod('onClose', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onError(UDPSocketOnErrorCallback listener) {
-    final result = $$context$$.callMethod('onError', [listener]);
+    final result = $$context$$.callMethod('onError', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onListening(OnListeningCallback listener) {
-    final result = $$context$$.callMethod('onListening', [listener]);
+    final result = $$context$$.callMethod('onListening', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onMessage(UDPSocketOnMessageCallback listener) {
-    final result = $$context$$.callMethod('onMessage', [listener]);
+    final result = $$context$$.callMethod('onMessage', [
+      ListenerManager.addListener(
+        listener,
+        (res) => UDPSocketOnMessageListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
@@ -35321,17 +35653,32 @@ class UpdateManager {
   }
 
   void onCheckForUpdate(OnCheckForUpdateCallback listener) {
-    final result = $$context$$.callMethod('onCheckForUpdate', [listener]);
+    final result = $$context$$.callMethod('onCheckForUpdate', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnCheckForUpdateListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onUpdateFailed(OnUpdateFailedCallback listener) {
-    final result = $$context$$.callMethod('onUpdateFailed', [listener]);
+    final result = $$context$$.callMethod('onUpdateFailed', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onUpdateReady(OnUpdateReadyCallback listener) {
-    final result = $$context$$.callMethod('onUpdateReady', [listener]);
+    final result = $$context$$.callMethod('onUpdateReady', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 }
@@ -35349,22 +35696,34 @@ class UploadTask {
   }
 
   void offHeadersReceived([OffHeadersReceivedCallback? listener]) {
-    final result = $$context$$.callMethod('offHeadersReceived', [listener]);
+    final result = $$context$$.callMethod(
+        'offHeadersReceived', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offProgressUpdate([UploadTaskOffProgressUpdateCallback? listener]) {
-    final result = $$context$$.callMethod('offProgressUpdate', [listener]);
+    final result = $$context$$.callMethod(
+        'offProgressUpdate', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void onHeadersReceived(OnHeadersReceivedCallback listener) {
-    final result = $$context$$.callMethod('onHeadersReceived', [listener]);
+    final result = $$context$$.callMethod('onHeadersReceived', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnHeadersReceivedListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onProgressUpdate(UploadTaskOnProgressUpdateCallback listener) {
-    final result = $$context$$.callMethod('onProgressUpdate', [listener]);
+    final result = $$context$$.callMethod('onProgressUpdate', [
+      ListenerManager.addListener(
+        listener,
+        (res) => UploadTaskOnProgressUpdateListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 }
@@ -36886,191 +37245,215 @@ class Wx {
   }
 
   void offAccelerometerChange([OffAccelerometerChangeCallback? listener]) {
-    final result = $$context$$.callMethod('offAccelerometerChange', [listener]);
+    final result = $$context$$.callMethod(
+        'offAccelerometerChange', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offAppHide([OffAppHideCallback? listener]) {
-    final result = $$context$$.callMethod('offAppHide', [listener]);
+    final result = $$context$$
+        .callMethod('offAppHide', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offAppShow([OffAppShowCallback? listener]) {
-    final result = $$context$$.callMethod('offAppShow', [listener]);
+    final result = $$context$$
+        .callMethod('offAppShow', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offAudioInterruptionBegin(
       [OffAudioInterruptionBeginCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offAudioInterruptionBegin', [listener]);
+    final result = $$context$$.callMethod('offAudioInterruptionBegin',
+        [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offAudioInterruptionEnd([OffAudioInterruptionEndCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offAudioInterruptionEnd', [listener]);
+    final result = $$context$$.callMethod(
+        'offAudioInterruptionEnd', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offBLECharacteristicValueChange(
       [OffBLECharacteristicValueChangeCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offBLECharacteristicValueChange', [listener]);
+    final result = $$context$$.callMethod('offBLECharacteristicValueChange',
+        [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offBLEConnectionStateChange(
       [OffBLEConnectionStateChangeCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offBLEConnectionStateChange', [listener]);
+    final result = $$context$$.callMethod('offBLEConnectionStateChange',
+        [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offBLEMTUChange([OffBLEMTUChangeCallback? listener]) {
-    final result = $$context$$.callMethod('offBLEMTUChange', [listener]);
+    final result = $$context$$.callMethod(
+        'offBLEMTUChange', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offBLEPeripheralConnectionStateChanged(
       [OffBLEPeripheralConnectionStateChangedCallback? listener]) {
-    final result = $$context$$
-        .callMethod('offBLEPeripheralConnectionStateChanged', [listener]);
+    final result = $$context$$.callMethod(
+        'offBLEPeripheralConnectionStateChanged',
+        [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offBeaconServiceChange([OffBeaconServiceChangeCallback? listener]) {
-    final result = $$context$$.callMethod('offBeaconServiceChange', [listener]);
+    final result = $$context$$.callMethod(
+        'offBeaconServiceChange', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offBeaconUpdate([OffBeaconUpdateCallback? listener]) {
-    final result = $$context$$.callMethod('offBeaconUpdate', [listener]);
+    final result = $$context$$.callMethod(
+        'offBeaconUpdate', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offBluetoothAdapterStateChange(
       [OffBluetoothAdapterStateChangeCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offBluetoothAdapterStateChange', [listener]);
+    final result = $$context$$.callMethod('offBluetoothAdapterStateChange',
+        [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offBluetoothDeviceFound([OffBluetoothDeviceFoundCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offBluetoothDeviceFound', [listener]);
+    final result = $$context$$.callMethod(
+        'offBluetoothDeviceFound', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offCompassChange([OffCompassChangeCallback? listener]) {
-    final result = $$context$$.callMethod('offCompassChange', [listener]);
+    final result = $$context$$.callMethod(
+        'offCompassChange', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offCopyUrl([OffCopyUrlCallback? listener]) {
-    final result = $$context$$.callMethod('offCopyUrl', [listener]);
+    final result = $$context$$
+        .callMethod('offCopyUrl', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offDeviceMotionChange([OffDeviceMotionChangeCallback? listener]) {
-    final result = $$context$$.callMethod('offDeviceMotionChange', [listener]);
+    final result = $$context$$.callMethod(
+        'offDeviceMotionChange', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offError([WxOffErrorCallback? listener]) {
-    final result = $$context$$.callMethod('offError', [listener]);
+    final result = $$context$$
+        .callMethod('offError', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offGetWifiList([OffGetWifiListCallback? listener]) {
-    final result = $$context$$.callMethod('offGetWifiList', [listener]);
+    final result = $$context$$.callMethod(
+        'offGetWifiList', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offHCEMessage([OffHCEMessageCallback? listener]) {
-    final result = $$context$$.callMethod('offHCEMessage', [listener]);
+    final result = $$context$$.callMethod(
+        'offHCEMessage', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offKeyboardHeightChange([OffKeyboardHeightChangeCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offKeyboardHeightChange', [listener]);
+    final result = $$context$$.callMethod(
+        'offKeyboardHeightChange', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offLazyLoadError([OffLazyLoadErrorCallback? listener]) {
-    final result = $$context$$.callMethod('offLazyLoadError', [listener]);
+    final result = $$context$$.callMethod(
+        'offLazyLoadError', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offLocalServiceDiscoveryStop(
       [OffLocalServiceDiscoveryStopCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offLocalServiceDiscoveryStop', [listener]);
+    final result = $$context$$.callMethod('offLocalServiceDiscoveryStop',
+        [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offLocalServiceFound([OffLocalServiceFoundCallback? listener]) {
-    final result = $$context$$.callMethod('offLocalServiceFound', [listener]);
+    final result = $$context$$.callMethod(
+        'offLocalServiceFound', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offLocalServiceLost([OffLocalServiceLostCallback? listener]) {
-    final result = $$context$$.callMethod('offLocalServiceLost', [listener]);
+    final result = $$context$$.callMethod(
+        'offLocalServiceLost', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offLocalServiceResolveFail(
       [OffLocalServiceResolveFailCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offLocalServiceResolveFail', [listener]);
+    final result = $$context$$.callMethod('offLocalServiceResolveFail',
+        [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offLocationChange([OffLocationChangeCallback? listener]) {
-    final result = $$context$$.callMethod('offLocationChange', [listener]);
+    final result = $$context$$.callMethod(
+        'offLocationChange', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offLocationChangeError([OffLocationChangeErrorCallback? listener]) {
-    final result = $$context$$.callMethod('offLocationChangeError', [listener]);
+    final result = $$context$$.callMethod(
+        'offLocationChangeError', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offMemoryWarning([OffMemoryWarningCallback? listener]) {
-    final result = $$context$$.callMethod('offMemoryWarning', [listener]);
+    final result = $$context$$.callMethod(
+        'offMemoryWarning', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offNetworkStatusChange([OffNetworkStatusChangeCallback? listener]) {
-    final result = $$context$$.callMethod('offNetworkStatusChange', [listener]);
+    final result = $$context$$.callMethod(
+        'offNetworkStatusChange', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offNetworkWeakChange([OffNetworkWeakChangeCallback? listener]) {
-    final result = $$context$$.callMethod('offNetworkWeakChange', [listener]);
+    final result = $$context$$.callMethod(
+        'offNetworkWeakChange', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offPageNotFound([OffPageNotFoundCallback? listener]) {
-    final result = $$context$$.callMethod('offPageNotFound', [listener]);
+    final result = $$context$$.callMethod(
+        'offPageNotFound', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offScreenRecordingStateChanged(
       [OffScreenRecordingStateChangedCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offScreenRecordingStateChanged', [listener]);
+    final result = $$context$$.callMethod('offScreenRecordingStateChanged',
+        [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offThemeChange([OffThemeChangeCallback? listener]) {
-    final result = $$context$$.callMethod('offThemeChange', [listener]);
+    final result = $$context$$.callMethod(
+        'offThemeChange', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offUnhandledRejection([OffUnhandledRejectionCallback? listener]) {
-    final result = $$context$$.callMethod('offUnhandledRejection', [listener]);
+    final result = $$context$$.callMethod(
+        'offUnhandledRejection', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
@@ -37080,159 +37463,258 @@ class Wx {
   }
 
   void offVoIPChatInterrupted([OffVoIPChatInterruptedCallback? listener]) {
-    final result = $$context$$.callMethod('offVoIPChatInterrupted', [listener]);
+    final result = $$context$$.callMethod(
+        'offVoIPChatInterrupted', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offVoIPChatMembersChanged(
       [OffVoIPChatMembersChangedCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offVoIPChatMembersChanged', [listener]);
+    final result = $$context$$.callMethod('offVoIPChatMembersChanged',
+        [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offVoIPChatSpeakersChanged(
       [OffVoIPChatSpeakersChangedCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offVoIPChatSpeakersChanged', [listener]);
+    final result = $$context$$.callMethod('offVoIPChatSpeakersChanged',
+        [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offVoIPChatStateChanged([OffVoIPChatStateChangedCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offVoIPChatStateChanged', [listener]);
+    final result = $$context$$.callMethod(
+        'offVoIPChatStateChanged', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offVoIPVideoMembersChanged(
       [OffVoIPVideoMembersChangedCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offVoIPVideoMembersChanged', [listener]);
+    final result = $$context$$.callMethod('offVoIPVideoMembersChanged',
+        [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offWifiConnected([OffWifiConnectedCallback? listener]) {
-    final result = $$context$$.callMethod('offWifiConnected', [listener]);
+    final result = $$context$$.callMethod(
+        'offWifiConnected', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offWifiConnectedWithPartialInfo(
       [OffWifiConnectedWithPartialInfoCallback? listener]) {
-    final result =
-        $$context$$.callMethod('offWifiConnectedWithPartialInfo', [listener]);
+    final result = $$context$$.callMethod('offWifiConnectedWithPartialInfo',
+        [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void offWindowResize([OffWindowResizeCallback? listener]) {
-    final result = $$context$$.callMethod('offWindowResize', [listener]);
+    final result = $$context$$.callMethod(
+        'offWindowResize', [ListenerManager.removeListener(listener)]);
     return result;
   }
 
   void onAccelerometerChange(OnAccelerometerChangeCallback listener) {
-    final result = $$context$$.callMethod('onAccelerometerChange', [listener]);
+    final result = $$context$$.callMethod('onAccelerometerChange', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnAccelerometerChangeListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onAppHide(OnAppHideCallback listener) {
-    final result = $$context$$.callMethod('onAppHide', [listener]);
+    final result = $$context$$.callMethod('onAppHide', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onAppShow(OnAppShowCallback listener) {
-    final result = $$context$$.callMethod('onAppShow', [listener]);
+    final result = $$context$$.callMethod('onAppShow', [
+      ListenerManager.addListener(
+        listener,
+        (res) => LaunchOptionsApp($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onAudioInterruptionBegin(OnAudioInterruptionBeginCallback listener) {
-    final result =
-        $$context$$.callMethod('onAudioInterruptionBegin', [listener]);
+    final result = $$context$$.callMethod('onAudioInterruptionBegin', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onAudioInterruptionEnd(OnAudioInterruptionEndCallback listener) {
-    final result = $$context$$.callMethod('onAudioInterruptionEnd', [listener]);
+    final result = $$context$$.callMethod('onAudioInterruptionEnd', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onBLECharacteristicValueChange(
       OnBLECharacteristicValueChangeCallback listener) {
-    final result =
-        $$context$$.callMethod('onBLECharacteristicValueChange', [listener]);
+    final result = $$context$$.callMethod('onBLECharacteristicValueChange', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnBLECharacteristicValueChangeListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onBLEConnectionStateChange(OnBLEConnectionStateChangeCallback listener) {
-    final result =
-        $$context$$.callMethod('onBLEConnectionStateChange', [listener]);
+    final result = $$context$$.callMethod('onBLEConnectionStateChange', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnBLEConnectionStateChangeListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onBLEMTUChange(OnBLEMTUChangeCallback listener) {
-    final result = $$context$$.callMethod('onBLEMTUChange', [listener]);
+    final result = $$context$$.callMethod('onBLEMTUChange', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnBLEMTUChangeListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onBLEPeripheralConnectionStateChanged(
       OnBLEPeripheralConnectionStateChangedCallback listener) {
-    final result = $$context$$
-        .callMethod('onBLEPeripheralConnectionStateChanged', [listener]);
+    final result =
+        $$context$$.callMethod('onBLEPeripheralConnectionStateChanged', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnBLEMTUChangeListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onBackgroundAudioPause(OnBackgroundAudioPauseCallback listener) {
-    final result = $$context$$.callMethod('onBackgroundAudioPause', [listener]);
+    final result = $$context$$.callMethod('onBackgroundAudioPause', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onBackgroundAudioPlay(OnBackgroundAudioPlayCallback listener) {
-    final result = $$context$$.callMethod('onBackgroundAudioPlay', [listener]);
+    final result = $$context$$.callMethod('onBackgroundAudioPlay', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onBackgroundAudioStop(OnBackgroundAudioStopCallback listener) {
-    final result = $$context$$.callMethod('onBackgroundAudioStop', [listener]);
+    final result = $$context$$.callMethod('onBackgroundAudioStop', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onBackgroundFetchData(OnBackgroundFetchDataCallback listener) {
-    final result = $$context$$.callMethod('onBackgroundFetchData', [listener]);
+    final result = $$context$$.callMethod('onBackgroundFetchData', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onBeaconServiceChange(OnBeaconServiceChangeCallback listener) {
-    final result = $$context$$.callMethod('onBeaconServiceChange', [listener]);
+    final result = $$context$$.callMethod('onBeaconServiceChange', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnBackgroundFetchDataListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onBeaconUpdate(OnBeaconUpdateCallback listener) {
-    final result = $$context$$.callMethod('onBeaconUpdate', [listener]);
+    final result = $$context$$.callMethod('onBeaconUpdate', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnBeaconUpdateListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onBluetoothAdapterStateChange(
       OnBluetoothAdapterStateChangeCallback listener) {
-    final result =
-        $$context$$.callMethod('onBluetoothAdapterStateChange', [listener]);
+    final result = $$context$$.callMethod('onBluetoothAdapterStateChange', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnBluetoothAdapterStateChangeListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onBluetoothDeviceFound(OnBluetoothDeviceFoundCallback listener) {
-    final result = $$context$$.callMethod('onBluetoothDeviceFound', [listener]);
+    final result = $$context$$.callMethod('onBluetoothDeviceFound', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnBluetoothDeviceFoundListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onCompassChange(OnCompassChangeCallback listener) {
-    final result = $$context$$.callMethod('onCompassChange', [listener]);
+    final result = $$context$$.callMethod('onCompassChange', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnCompassChangeListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onCopyUrl(OnCopyUrlCallback listener) {
-    final result = $$context$$.callMethod('onCopyUrl', [listener]);
+    final result = $$context$$.callMethod('onCopyUrl', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnCopyUrlListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onDeviceMotionChange(OnDeviceMotionChangeCallback listener) {
-    final result = $$context$$.callMethod('onDeviceMotionChange', [listener]);
+    final result = $$context$$.callMethod('onDeviceMotionChange', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnDeviceMotionChangeListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
@@ -37242,167 +37724,315 @@ class Wx {
   }
 
   void onGetWifiList(OnGetWifiListCallback listener) {
-    final result = $$context$$.callMethod('onGetWifiList', [listener]);
+    final result = $$context$$.callMethod('onGetWifiList', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnGetWifiListListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onGyroscopeChange(OnGyroscopeChangeCallback listener) {
-    final result = $$context$$.callMethod('onGyroscopeChange', [listener]);
+    final result = $$context$$.callMethod('onGyroscopeChange', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnGetWifiListListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onHCEMessage(OnHCEMessageCallback listener) {
-    final result = $$context$$.callMethod('onHCEMessage', [listener]);
+    final result = $$context$$.callMethod('onHCEMessage', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnHCEMessageListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onKeyboardHeightChange(OnKeyboardHeightChangeCallback listener) {
-    final result = $$context$$.callMethod('onKeyboardHeightChange', [listener]);
+    final result = $$context$$.callMethod('onKeyboardHeightChange', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnKeyboardHeightChangeListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onLazyLoadError(OnLazyLoadErrorCallback listener) {
-    final result = $$context$$.callMethod('onLazyLoadError', [listener]);
+    final result = $$context$$.callMethod('onLazyLoadError', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnLazyLoadErrorListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onLocalServiceDiscoveryStop(
       OnLocalServiceDiscoveryStopCallback listener) {
-    final result =
-        $$context$$.callMethod('onLocalServiceDiscoveryStop', [listener]);
+    final result = $$context$$.callMethod('onLocalServiceDiscoveryStop', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onLocalServiceFound(OnLocalServiceFoundCallback listener) {
-    final result = $$context$$.callMethod('onLocalServiceFound', [listener]);
+    final result = $$context$$.callMethod('onLocalServiceFound', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnLocalServiceFoundListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onLocalServiceLost(OnLocalServiceLostCallback listener) {
-    final result = $$context$$.callMethod('onLocalServiceLost', [listener]);
+    final result = $$context$$.callMethod('onLocalServiceLost', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnLocalServiceLostListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onLocalServiceResolveFail(OnLocalServiceResolveFailCallback listener) {
-    final result =
-        $$context$$.callMethod('onLocalServiceResolveFail', [listener]);
+    final result = $$context$$.callMethod('onLocalServiceResolveFail', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnLocalServiceLostListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onLocationChange(OnLocationChangeCallback listener) {
-    final result = $$context$$.callMethod('onLocationChange', [listener]);
+    final result = $$context$$.callMethod('onLocationChange', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnLocationChangeListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onLocationChangeError(OnLocationChangeErrorCallback listener) {
-    final result = $$context$$.callMethod('onLocationChangeError', [listener]);
+    final result = $$context$$.callMethod('onLocationChangeError', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnLocationChangeErrorListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onMemoryWarning(OnMemoryWarningCallback listener) {
-    final result = $$context$$.callMethod('onMemoryWarning', [listener]);
+    final result = $$context$$.callMethod('onMemoryWarning', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnMemoryWarningListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onNetworkStatusChange(OnNetworkStatusChangeCallback listener) {
-    final result = $$context$$.callMethod('onNetworkStatusChange', [listener]);
+    final result = $$context$$.callMethod('onNetworkStatusChange', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnNetworkStatusChangeListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onNetworkWeakChange(OnNetworkWeakChangeCallback listener) {
-    final result = $$context$$.callMethod('onNetworkWeakChange', [listener]);
+    final result = $$context$$.callMethod('onNetworkWeakChange', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnNetworkWeakChangeListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onPageNotFound(OnPageNotFoundCallback listener) {
-    final result = $$context$$.callMethod('onPageNotFound', [listener]);
+    final result = $$context$$.callMethod('onPageNotFound', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnPageNotFoundListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onScreenRecordingStateChanged(
       OnScreenRecordingStateChangedCallback listener) {
-    final result =
-        $$context$$.callMethod('onScreenRecordingStateChanged', [listener]);
+    final result = $$context$$.callMethod('onScreenRecordingStateChanged', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnScreenRecordingStateChangedListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onSocketClose(OnSocketCloseCallback listener) {
-    final result = $$context$$.callMethod('onSocketClose', [listener]);
+    final result = $$context$$.callMethod('onSocketClose', [
+      ListenerManager.addListener(
+        listener,
+        (res) => SocketTaskOnCloseListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onSocketError(OnSocketErrorCallback listener) {
-    final result = $$context$$.callMethod('onSocketError', [listener]);
+    final result = $$context$$.callMethod('onSocketError', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onSocketMessage(OnSocketMessageCallback listener) {
-    final result = $$context$$.callMethod('onSocketMessage', [listener]);
+    final result = $$context$$.callMethod('onSocketMessage', [
+      ListenerManager.addListener(
+        listener,
+        (res) => SocketTaskOnMessageListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onSocketOpen(OnSocketOpenCallback listener) {
-    final result = $$context$$.callMethod('onSocketOpen', [listener]);
+    final result = $$context$$.callMethod('onSocketOpen', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnSocketOpenListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onThemeChange(OnThemeChangeCallback listener) {
-    final result = $$context$$.callMethod('onThemeChange', [listener]);
+    final result = $$context$$.callMethod('onThemeChange', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnThemeChangeListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onUnhandledRejection(OnUnhandledRejectionCallback listener) {
-    final result = $$context$$.callMethod('onUnhandledRejection', [listener]);
+    final result = $$context$$.callMethod('onUnhandledRejection', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnUnhandledRejectionListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onUserCaptureScreen(OnUserCaptureScreenCallback listener) {
-    final result = $$context$$.callMethod('onUserCaptureScreen', [listener]);
+    final result = $$context$$.callMethod('onUserCaptureScreen', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onVoIPChatInterrupted(OnVoIPChatInterruptedCallback listener) {
-    final result = $$context$$.callMethod('onVoIPChatInterrupted', [listener]);
+    final result = $$context$$.callMethod('onVoIPChatInterrupted', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnVoIPChatInterruptedListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onVoIPChatMembersChanged(OnVoIPChatMembersChangedCallback listener) {
-    final result =
-        $$context$$.callMethod('onVoIPChatMembersChanged', [listener]);
+    final result = $$context$$.callMethod('onVoIPChatMembersChanged', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnVoIPChatMembersChangedListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onVoIPChatSpeakersChanged(OnVoIPChatSpeakersChangedCallback listener) {
-    final result =
-        $$context$$.callMethod('onVoIPChatSpeakersChanged', [listener]);
+    final result = $$context$$.callMethod('onVoIPChatSpeakersChanged', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnVoIPChatSpeakersChangedListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onVoIPChatStateChanged(OnVoIPChatStateChangedCallback listener) {
-    final result = $$context$$.callMethod('onVoIPChatStateChanged', [listener]);
+    final result = $$context$$.callMethod('onVoIPChatStateChanged', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnVoIPChatStateChangedListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onVoIPVideoMembersChanged(OnVoIPVideoMembersChangedCallback listener) {
-    final result =
-        $$context$$.callMethod('onVoIPVideoMembersChanged', [listener]);
+    final result = $$context$$.callMethod('onVoIPVideoMembersChanged', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnVoIPVideoMembersChangedListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onWifiConnected(OnWifiConnectedCallback listener) {
-    final result = $$context$$.callMethod('onWifiConnected', [listener]);
+    final result = $$context$$.callMethod('onWifiConnected', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnWifiConnectedListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onWifiConnectedWithPartialInfo(
       OnWifiConnectedWithPartialInfoCallback listener) {
-    final result =
-        $$context$$.callMethod('onWifiConnectedWithPartialInfo', [listener]);
+    final result = $$context$$.callMethod('onWifiConnectedWithPartialInfo', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnWifiConnectedWithPartialInfoListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
   void onWindowResize(OnWindowResizeCallback listener) {
-    final result = $$context$$.callMethod('onWindowResize', [listener]);
+    final result = $$context$$.callMethod('onWindowResize', [
+      ListenerManager.addListener(
+        listener,
+        (res) => OnWifiConnectedWithPartialInfoListenerResult($$context$$: res),
+      )
+    ]);
     return result;
   }
 
@@ -41126,3 +41756,20 @@ typedef WxStartRecordSuccessCallback = void Function(
 typedef WxStopRecordSuccessCallback = void Function(GeneralCallbackResult);
 
 final wx = Wx($$context$$: mpjs.context['wx']);
+
+class ListenerManager {
+  static final Map<int, Function> _callbacks = {};
+
+  static Function? removeListener(Function? originListener) {
+    if (originListener == null) return null;
+    return _callbacks[originListener.hashCode];
+  }
+
+  static Function addListener(Function originListener, Function builder) {
+    final newCB = (res) {
+      originListener(builder(res));
+    };
+    _callbacks[originListener.hashCode] = newCB;
+    return newCB;
+  }
+}
