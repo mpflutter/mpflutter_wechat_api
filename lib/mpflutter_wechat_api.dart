@@ -38907,6 +38907,34 @@ class Wx {
     final result = $$context$$.callMethod('getXrFrameSystem', []);
     return result;
   }
+
+  void getPrivacySetting(GetPrivacySettingOption option) {
+    final result =
+        $$context$$.callMethod('getPrivacySetting', [option.$$context$$]);
+    return result;
+  }
+
+  void openPrivacyContract(OpenPrivacyContractOption option) {
+    final result =
+        $$context$$.callMethod('openPrivacyContract', [option.$$context$$]);
+    return result;
+  }
+
+  void onNeedPrivacyAuthorization(OnNeedPrivacyAuthorizationCallback listener) {
+    final result = $$context$$.callMethod('onNeedPrivacyAuthorization', [
+      ListenerManager.addListener(
+        listener,
+        (res) => GeneralCallbackResult($$context$$: res),
+      )
+    ]);
+    return result;
+  }
+
+  void requirePrivacyAuthorize(RequirePrivacyAuthorizeOption option) {
+    final result =
+        $$context$$.callMethod('requirePrivacyAuthorize', [option.$$context$$]);
+    return result;
+  }
 }
 
 typedef AccessCompleteCallback = void Function(GeneralCallbackResult);
@@ -41773,3 +41801,168 @@ class ListenerManager {
     return newCB;
   }
 }
+
+class RequirePrivacyAuthorizeOption {
+  late mpjs.JSObject $$context$$;
+
+  set complete(RequirePrivacyAuthorizeCompleteCallback? value) {
+    $$context$$["complete"] = (res) {
+      value?.call(GeneralCallbackResult($$context$$: res));
+    };
+  }
+
+  RequirePrivacyAuthorizeCompleteCallback? get complete {
+    return complete;
+  }
+
+  set fail(RequirePrivacyAuthorizeFailCallback? value) {
+    $$context$$["fail"] = (res) {
+      value?.call(GeneralCallbackResult($$context$$: res));
+    };
+  }
+
+  RequirePrivacyAuthorizeFailCallback? get fail {
+    return fail;
+  }
+
+  set success(RequirePrivacyAuthorizeSuccessCallback? value) {
+    $$context$$["success"] = (res) {
+      value?.call(GeneralCallbackResult($$context$$: res));
+    };
+  }
+
+  RequirePrivacyAuthorizeSuccessCallback? get success {
+    return success;
+  }
+
+  RequirePrivacyAuthorizeOption({mpjs.JSObject? $$context$$}) {
+    this.$$context$$ = $$context$$ ?? mpjs.JSObject("Object");
+  }
+}
+
+class GetPrivacySettingOption {
+  late mpjs.JSObject $$context$$;
+
+  set complete(GetPrivacySettingCompleteCallback? value) {
+    $$context$$["complete"] = (res) {
+      value?.call(GeneralCallbackResult($$context$$: res));
+    };
+  }
+
+  GetPrivacySettingCompleteCallback? get complete {
+    return complete;
+  }
+
+  set fail(GetPrivacySettingFailCallback? value) {
+    $$context$$["fail"] = (res) {
+      value?.call(GeneralCallbackResult($$context$$: res));
+    };
+  }
+
+  GetPrivacySettingFailCallback? get fail {
+    return fail;
+  }
+
+  set success(GetPrivacySettingSuccessCallback? value) {
+    $$context$$["success"] = (result) {
+      value?.call(GetPrivacySettingSuccessCallbackResult($$context$$: result));
+    };
+  }
+
+  GetPrivacySettingSuccessCallback? get success {
+    return success;
+  }
+
+  GetPrivacySettingOption({mpjs.JSObject? $$context$$}) {
+    this.$$context$$ = $$context$$ ?? mpjs.JSObject("Object");
+  }
+}
+
+class GetPrivacySettingSuccessCallbackResult {
+  late mpjs.JSObject $$context$$;
+
+  set needAuthorization(bool value) {
+    $$context$$["needAuthorization"] = value;
+  }
+
+  bool get needAuthorization {
+    return $$context$$["needAuthorization"];
+  }
+
+  set privacyContractName(String value) {
+    $$context$$["privacyContractName"] = value;
+  }
+
+  String get privacyContractName {
+    return $$context$$["privacyContractName"];
+  }
+
+  set errMsg(String value) {
+    $$context$$["errMsg"] = value;
+  }
+
+  String get errMsg {
+    return $$context$$["errMsg"];
+  }
+
+  GetPrivacySettingSuccessCallbackResult({mpjs.JSObject? $$context$$}) {
+    this.$$context$$ = $$context$$ ?? mpjs.JSObject("Object");
+  }
+}
+
+class OpenPrivacyContractOption {
+  late mpjs.JSObject $$context$$;
+
+  set complete(OpenPrivacyContractCompleteCallback? value) {
+    $$context$$["complete"] = (res) {
+      value?.call(GeneralCallbackResult($$context$$: res));
+    };
+  }
+
+  OpenPrivacyContractCompleteCallback? get complete {
+    return complete;
+  }
+
+  set fail(OpenPrivacyContractFailCallback? value) {
+    $$context$$["fail"] = (res) {
+      value?.call(GeneralCallbackResult($$context$$: res));
+    };
+  }
+
+  OpenPrivacyContractFailCallback? get fail {
+    return fail;
+  }
+
+  set success(OpenPrivacyContractSuccessCallback? value) {
+    $$context$$["success"] = (res) {
+      value?.call(GeneralCallbackResult($$context$$: res));
+    };
+  }
+
+  OpenPrivacyContractSuccessCallback? get success {
+    return success;
+  }
+
+  OpenPrivacyContractOption({mpjs.JSObject? $$context$$}) {
+    this.$$context$$ = $$context$$ ?? mpjs.JSObject("Object");
+  }
+}
+
+typedef OnNeedPrivacyAuthorizationCallback = void Function(
+    GeneralCallbackResult);
+typedef RequirePrivacyAuthorizeCompleteCallback = void Function(
+    GeneralCallbackResult);
+typedef RequirePrivacyAuthorizeFailCallback = void Function(
+    GeneralCallbackResult);
+typedef RequirePrivacyAuthorizeSuccessCallback = void Function(
+    GeneralCallbackResult);
+typedef GetPrivacySettingCompleteCallback = void Function(
+    GeneralCallbackResult);
+typedef GetPrivacySettingFailCallback = void Function(GeneralCallbackResult);
+typedef GetPrivacySettingSuccessCallback = void Function(
+    GetPrivacySettingSuccessCallbackResult);
+typedef OpenPrivacyContractCompleteCallback = void Function(
+    GeneralCallbackResult);
+typedef OpenPrivacyContractFailCallback = void Function(GeneralCallbackResult);
+typedef OpenPrivacyContractSuccessCallback = void Function(
+    GeneralCallbackResult);
