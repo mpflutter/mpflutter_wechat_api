@@ -1,5 +1,10 @@
 # ChangeLog
 
+## 2.2.1
+
+feat:
+- 新增 Privacy 相关 API
+
 ## 2.1.0
 
 fix:
