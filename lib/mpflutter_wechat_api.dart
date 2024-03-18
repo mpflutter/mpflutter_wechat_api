@@ -38475,7 +38475,7 @@ class Wx {
 
   void setStorageSync<T extends dynamic>(String key, T data) {
     final result =
-        $$context$$.callMethod('setStorageSync', [key, data.$$context$$]);
+        $$context$$.callMethod('setStorageSync', [key, data]);
     return result;
   }
 
