@@ -20998,7 +20998,11 @@ class ReadFileSuccessCallbackResult {
   }
 
   dynamic get data {
-    return $$context$$["data"];
+    final result = $$context$$["data"];
+    if (result is mpjs.JSObject) {
+      return ArrayBuffer($$context$$: result);
+    }
+    return result;
   }
 
   set errMsg(String value) {
@@ -33705,6 +33709,9 @@ class FileSystemManager {
         'readFileSync',
         [filePath, encoding, position, length]
           ..removeWhere((element) => element == null));
+    if (result is mpjs.JSObject) {
+      return ArrayBuffer($$context$$: result);
+    }
     return result;
   }
 
@@ -38474,8 +38481,7 @@ class Wx {
   }
 
   void setStorageSync<T extends dynamic>(String key, T data) {
-    final result =
-        $$context$$.callMethod('setStorageSync', [key, data]);
+    final result = $$context$$.callMethod('setStorageSync', [key, data]);
     return result;
   }
 
