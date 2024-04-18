@@ -32305,7 +32305,11 @@ class WriteFileOption {
   late mpjs.JSObject $$context$$;
 
   set data(dynamic value) {
-    $$context$$["data"] = value;
+    if (value is Uint8List) {
+      $$context$$["data"] = mpjs.context.newArrayBufferFromUint8List(value);
+    } else {
+      $$context$$["data"] = value;
+    }
   }
 
   dynamic get data {
