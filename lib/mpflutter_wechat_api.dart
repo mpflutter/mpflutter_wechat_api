@@ -5393,7 +5393,10 @@ class ChooseImageSuccessCallbackResult {
   }
 
   List<String> get tempFilePaths {
-    return $$context$$["tempFilePaths"];
+    return ($$context$$["tempFilePaths"] as mpjs.JSArray)
+        .value()
+        .map((it) => it as String)
+        .toList();
   }
 
   List<ImageFile> $tempFiles = <ImageFile>[];
@@ -36312,7 +36315,7 @@ class Wx {
   }
 
   RequestTask request<T extends dynamic>(RequestOption<T> option) {
-    final result = $$context$$.callMethod('request', [option]);
+    final result = $$context$$.callMethod('request', [option.$$context$$]);
 
     return RequestTask($$context$$: result);
   }
@@ -37031,7 +37034,7 @@ class Wx {
 
   PromisifySuccessResult<U, GetStorageOption<T>>
       getStorage<T extends dynamic, U extends GetStorageOption<T>>(U option) {
-    final result = $$context$$.callMethod('getStorage', [option]);
+    final result = $$context$$.callMethod('getStorage', [option.$$context$$]);
     return result;
   }
 
@@ -38476,7 +38479,7 @@ class Wx {
 
   PromisifySuccessResult<U, SetStorageOption<T>>
       setStorage<T extends dynamic, U extends SetStorageOption<T>>(U option) {
-    final result = $$context$$.callMethod('setStorage', [option]);
+    final result = $$context$$.callMethod('setStorage', [option.$$context$$]);
     return result;
   }
 
