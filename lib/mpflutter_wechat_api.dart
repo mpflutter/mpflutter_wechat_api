@@ -19008,6 +19008,14 @@ class OpenEmbeddedMiniProgramOption {
     return $$context$$["noRelaunchIfPathUnchanged"];
   }
 
+  set allowFullScreen(bool? value) {
+    $$context$$["allowFullScreen"] = value;
+  }
+
+  bool? get allowFullScreen {
+    return $$context$$["allowFullScreen"];
+  }
+
   set path(String? value) {
     $$context$$["path"] = value;
   }
