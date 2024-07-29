@@ -1,5 +1,10 @@
 # ChangeLog
 
+## 2.2.4
+
+feat:
+- 补充一些 API 
+
 ## 2.2.1
 
 feat:

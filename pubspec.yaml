@@ -1,6 +1,6 @@
 name: mpflutter_wechat_api
 description: The MPFlutter wechat miniprogram api.
-version: 2.2.3
+version: 2.2.4
 homepage: https://mpflutter.com/
 
 environment:
