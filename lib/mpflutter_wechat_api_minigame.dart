@@ -5108,7 +5108,7 @@ class EnterOptionsGame {
   }
 
   Record<String, String> get query {
-    return query;
+    return $$context$$["query"];
   }
 
   set referrerInfo(EnterOptionsGameReferrerInfo value) {
@@ -11503,7 +11503,7 @@ class LaunchOptionsGame {
   }
 
   Record<String, String> get query {
-    return query;
+    return $$context$$["query"];
   }
 
   set referrerInfo(EnterOptionsGameReferrerInfo value) {
@@ -13830,7 +13830,7 @@ class OnShowListenerResult {
   }
 
   Record<String, String> get query {
-    return query;
+    return $$context$$["query"];
   }
 
   set referrerInfo(ResultReferrerInfo value) {
