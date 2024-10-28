@@ -2576,6 +2576,14 @@ class AuthSetting {
     return $$context$$["scope.writePhotosAlbum"];
   }
 
+  set scope_userFuzzyLocation(bool? value) {
+    $$context$$["scope_userFuzzyLocation"] = value;
+  }
+
+  bool? get scope_userFuzzyLocation {
+    return $$context$$["scope.userFuzzyLocation"];
+  }
+
   AuthSetting({mpjs.JSObject? $$context$$}) {
     this.$$context$$ = $$context$$ ?? mpjs.JSObject("Object");
   }
