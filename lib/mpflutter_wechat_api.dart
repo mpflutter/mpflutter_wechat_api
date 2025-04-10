@@ -18961,6 +18961,30 @@ class OpenDocumentOption {
   }
 }
 
+class OpenOfficialAccountProfileOption {
+  late mpjs.JSObject $$context$$;
+
+  set username(String value) {
+    $$context$$["username"] = value;
+  }
+
+  String get username {
+    return $$context$$["username"];
+  }
+}
+
+class OpenOfficialAccountArticleOption {
+  late mpjs.JSObject $$context$$;
+
+  set url(String value) {
+    $$context$$["url"] = value;
+  }
+
+  String get url {
+    return $$context$$["url"];
+  }
+}
+
 class OpenEmbeddedMiniProgramOption {
   late mpjs.JSObject $$context$$;
 
@@ -36786,6 +36810,22 @@ class Wx {
       [T? option]) {
     final result =
         $$context$$.callMethod('exitMiniProgram', [option?.$$context$$]);
+
+    return GeneralCallbackResult($$context$$: result);
+  }
+
+  GeneralCallbackResult openOfficialAccountProfile<T extends OpenOfficialAccountProfileOption>(
+      [T? option]) {
+    final result =
+        $$context$$.callMethod('openOfficialAccountProfile', [option?.$$context$$]);
+
+    return GeneralCallbackResult($$context$$: result);
+  }
+
+  GeneralCallbackResult openOfficialAccountArticle<T extends OpenOfficialAccountArticleOption>(
+      [T? option]) {
+    final result =
+        $$context$$.callMethod('openOfficialAccountArticle', [option?.$$context$$]);
 
     return GeneralCallbackResult($$context$$: result);
   }
